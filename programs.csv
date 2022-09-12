@@ -1,72 +1,68 @@
 #TAG (X=no install P=pip install N=npm install),NAME IN PACKAGE MANAGER (or git url),PURPOSE
 ,alsa-utils,Advanced settings for ALSA
-,apt-listbugs,Retrieves bug reports from Debian Bug Tracking System
-,apt-transport-https,Use repositories via HTTPS
 ,arandr,Simple GUI for XRandR
-,bat,Can highlight code output and display files
-,bc,A command line calculator
+X,bat,Can highlight code output and display files
 P,black,A Python code formatter
+,btop,A system monitor written in Cpp
 ,bspwm,A tiling window manager
 ,clang,A C compiler
 ,claws-mail,A lightweight and fast email client
 ,cmake,Build automation for C
 ,coreutils,The GNU Core Utilities
-,cowsay,A speaking cow on the command-line
-,cryptsetup,Manage LUKS encryptions
+X,cryptsetup,Manage LUKS encryptions
 ,ctags,Navigate source code with tags
 ,curl,A tool to transfer data to or from a server
 ,dunst,A notification daemon
-,eject,Eject specified devices
-,emacs-gtk,Not a text editor
+X,eject,Eject specified devices
+X,emacs-gtk,Not a text editor
 N,eslint-config-prettier,Disables conflicting eslint rules with Prettier
 ,feh,A fast and light image viewer
-,ffmpeg,A command-line video manipulation tool
-,firefox-esr,Firefox Extended Support Release
-,firmware-iwlwifi,Drivers for Intel wifi cards
-,firmware-linux,Free and non-free drivers
-,flake8,A Python linter
+X,firmware-iwlwifi,Drivers for Intel wifi cards
+,linux-firmware,Free and non-free drivers
+X,flake8,A Python linter
 ,flameshot,A screenshot utility
 ,flatpak,Run sandboxed applications
 ,fontconfig,Font configuration
-,fonts-font-awesome,Font Awesome fonts
-,fonts-noto-color-emoji,Noto Color Emoji fonts
-,fonts-symbola,Symbola fonts
-,fonts-ubuntu,Ubuntu fonts
+,fontforge,AVI
+,fonttools,AVI
+,font-util,AVI
+,fontawesome-fonts,Font Awesome fonts
+X,fonts-noto-color-emoji,Noto Color Emoji fonts
+X,fonts-symbola,Symbola fonts
+X,fonts-ubuntu,Ubuntu fonts
 ,fuse,A userspace filesystem framework
 ,fwupd,Update device firmware
 ,fzf,A command-line fuzzy-finder
 ,gimp,Graphics and image editor
 ,git,A version control system
-,gsimplecal,A simple calendar application
-,htop,An interactive process viewer
 X,https://github.com/alacritty/alacritty,A cross-platform OpenGL terminal emulator
 ,imagemagick,Convert and edit images
 ,jq,A command-line JSON processor
-,keyctl,A set of utilities for managing the key retention facility in the kernel
-,libayatana-appindicator3-1,Application Indicators
+X,keyctl,A set of utilities for managing the key retention facility in the kernel
+,libappindicator,Application Indicators
 ,libclang-dev,A common development package
 ,libnotify-bin,Allows desktop notifications
-,libusbmuxd-tools,USB multiplexor daemon for iPhone
 ,libxml2-utils,XML utilities
 ,light-locker,A session locker for LightDM
-,ligthdm,A cross-desktop display manager
+,lightdm,A cross-desktop display manager
 ,lm-sensors,A daemon to watch sensor values and log problems
 ,lxappearance,A GTK+ theme switcher
 ,lynx,A terminal based web browser
-,markdown,A text-to-HTML conversion tool for markdown files
-,mesa-utils,GL utilities built by Mesa
+X,markdown,A text-to-HTML conversion tool for markdown files
+,mesa-dev,GL utilities built by Mesa
 ,moreutils,A collection of unix tools
 ,mpc,A client for MPD
-,mpd,Music Player Daemon
-,mpv,A media player
+X,mpd,Music Player Daemon
+X,mpv,A media player
 ,mupdf,A lightweight PDF and E-book viewer
-,ncmpcpp,A client for MPD
+X,ncmpcpp,A client for MPD
 ,neofetch,A command-line utility to fetch system information
+,neovim,A text editor
 ,net-tools,Collection of networking tools
-,network-manager-gnome,Configures network interfaces
-,network-manager-openvpn-gnome,OpenVPN for Network Manager
+,networkmanager,Configures network interfaces
+,network-manager-openvpn,OpenVPN for Network Manager
 X,nodejs,Back-end JavaScript runtime environment
-,npm,A package manager for JavaScript
+X,npm,A package manager for JavaScript
 X,https://github.com/neovim/neovim,An improved Vim
 ,onboard,Onscreen keyboard
 ,openvpn,OpenVPN protocol
@@ -78,25 +74,23 @@ N,prettier,An opinionated code formatter
 N,@prettier/plugin-xml,XML plugin for prettier
 P,pylint,A code analyser for Python
 P,pylint-odoo,A Pylint plugin for Odoo
-,python3-pip,Package Installer for Python
 ,python3,Python Programming Language
-,python3-venv,Create Python virtual environments
+,python3-pip,Package Installer for Python
+X,python3-venv,Create Python virtual environments
+P,--no-cache-dir cairocffi,Qtile dependency
+P,qtile,A tiling window manager written in Python
 ,redshift,Adjusts the color temperatur of your screen
 ,ripgrep,A line-oriented search tool that recursively searches the current directory for a regex pattern
 ,rofi,An application launcher
 ,rsync,synchronizes remote and local files
 ,shellcheck,Shell script analysis tool
 ,slick-greeter,A lightDM greeter
-,ssh,The Secure Shell Protocol
-,suckless-tools,Tools that suck less
-,sudo,Run programs as superuser
+X,suckless-tools,Tools that suck less
 ,sxhkd,A keyboard shortcut daemon
 ,sxiv,Simple X Image Viewer
-,tlp,Optimize laptop battery life
 ,tree,A recursive directory listing program
 ,unzip,Uncompress files
-,uuid-dev,Universally Unique ID library
-,vim-gtk3,A text editor
+,uuid-devel,Universally Unique ID library
 ,wget,Retrieve files from the internet
 ,wmctrl,Control EWMH compatible X window window managers
 ,xclip,Copy and paste at the command-line
@@ -105,3 +99,29 @@ P,pylint-odoo,A Pylint plugin for Odoo
 ,xterm,A basic terminal emulator
 ,zathura,A PDF viewer
 ,zip,Compress files
+,readline-devel,R dependency
+,libcurl-devel,R dependency
+,openssl-devel,R dependency
+,gnutls-devel.x86_64,R dependency
+,libxml2-devel,R dependency
+,ImageMagick-devel,R dependency
+,libjpeg-turbo-devel,R dependency
+,libpng-devel,R dependency
+,cairo-devel.x86_64,R dependency
+,pango-devel.x86_64,R dependency
+,libX11-devel,R dependency
+,libXt-devel,R dependency
+,libzstd-devel,R dependency
+,texlive,R dependency
+,texinfo,R dependency
+,texlive-latex-fonts,R dependency
+,screen,R dependency
+,wget,R dependency
+,pcre2-devel,R dependency
+,java-11-openjdk-devel,R dependency
+,libssh2-devel,R dependency
+,libgit2-devel,R dependency
+,sqlite,R dependency and databases
+P,jedi,Radian dependency
+P,setuptools,Radian dependency
+P,radian,Python R interpreter
