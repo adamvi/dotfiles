@@ -1,0 +1,55 @@
+##  fdisk partioning:
+
+Disk /dev/nvme0n1: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
+Disk model: WD Green SN350 1TB
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 0ADC77F8-A8B7-3348-836E-00C56857C6F6
+
+Device             Start       End   Sectors  Size Type
+/dev/nvme0n1p1      2048     18431     16384    8M BIOS boot
+/dev/nvme0n1p2     18432   1067007   1048576  512M Linux RAID
+/dev/nvme0n1p3   1067008 210782207 209715200  100G Linux RAID
+/dev/nvme0n1p4 210782208 235948031  25165824   12G Linux RAID
+
+Disk /dev/sda: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
+Disk model: Samsung SSD 850
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: FA4A5E5C-E4F3-8E42-81E9-C9542C4216DA
+
+Device         Start       End   Sectors  Size Type
+/dev/sda1       2048     18431     16384    8M BIOS boot
+/dev/sda2      18432   1067007   1048576  512M Linux RAID
+/dev/sda3    1067008 210782207 209715200  100G LLinux RAID
+/dev/sda4  210782208 235948031  25165824   12G Linux RAID
+
+Disk /dev/sdb: 894.25 GiB, 960197124096 bytes, 1875385008 sectors
+Disk model: Crucial_CT960M50
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 05226A47-F7C9-E148-BF80-848B8F0E0457
+
+Device         Start       End   Sectors  Size Type
+/dev/sdb1       2048     18431     16384    8M BIOS boot
+/dev/sdb2      18432   1067007   1048576  512M Linux RAID
+/dev/sdb3    1067008 210782207 209715200  100G Linux RAID
+/dev/sdb4  210782208 235948031  25165824   12G Linux RAID
+
+modprobe raid0
+modprobe raid1
+modprobe raid5
+
+mdadm --create /dev/md0 --level=1 --raid-devices=3 --metadata=0.90 /dev/nvme0n1p2 /dev/sda2 /dev/sdb2
+mdadm --create /dev/md1 --level=0 --raid-devices=3  /dev/nvme0n1p3 /dev/sda3 /dev/sdb3
+mdadm --create /dev/md2 --level=0 --raid-devices=3  /dev/nvme0n1p4 /dev/sda4 /dev/sdb4
+
+watch -n .1 cat /proc/mdstat
+
+mdadm --examine --scan >> /etc/mdadm.conf
