@@ -1,51 +1,42 @@
 # AVI clear-linux-config
 
 targetMedia:
-- name: nvme0n1
-  type: disk
-  children:
-  - name: nvme0n1p1
-    path: /dev/nvme0n1p1
-    fstype: ext4
-    options: -b 4096 -O ^64bit
-    mountpoint: /
-    size: "125G"
-    type: part
-  - name: nvme0n1p2
-    path: /dev/nvme0n1p2
-    fstype: swap
-    size: "8150M"
-    type: part
 - name: sda
   path: /dev/sda
   size: "150M"
   type: disk
   children:
   - name: sda1
-    path: /dev/sda1
-    size: "8388608"
-    ro: "false"
-    rm: "false"
-    type: part
-  - name: sda2
-    path: /dev/sda2
     fstype: vfat
     mountpoint: /boot
     size: "1073741824"
     type: part
+- name: nvme0n1
+  type: disk
+  children:
+  - name: nvme0n1p1
+    fstype: ext4
+    options: -b 4096 -O ^64bit
+    mountpoint: /
+    size: "125G"
+    type: part
+  - name: nvme0n1p2
+    fstype: swap
+    size: "8150M"
+    type: part
 keyboard: us
 language: en_US.UTF-8
+timezone: America/Denver
 bundles: [os-core, os-core-update-dev, openssh-server, NetworkManager, sysadmin-basic,
   tzdata]
 telemetry: false
-timezone: America/Denver
+legacyBios: true
 users:
 - login: avi
   username: Adam VI
   admin: true
 kernel: kernel-native
 hostname: clearance
-legacyBios: true
 autoUpdate: true
 copyNetwork: true
 copySwupd: true
