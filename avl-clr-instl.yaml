@@ -16,7 +16,7 @@ targetMedia:
     type: part
   - name: sda2
     path: /dev/sda2
-    uuid: 
+    uuid: E9A8-2764
     fstype: vfat
     mountpoint: /boot
     label: CLR_BOOT
@@ -32,7 +32,7 @@ targetMedia:
   children:
   - name: nvme0n1p1
     path: /dev/nvme0n1p1
-    uuid: 
+    uuid: f9431972-ac99-45bc-a376-6f5cbbf382d3
     fstype: ext4
     mountpoint: /
     label: CLR_ROOT
@@ -42,7 +42,7 @@ targetMedia:
     type: part
   - name: nvme0n1p2
     path: /dev/nvme0n1p2
-    uuid: 
+    uuid: 0ff22c1c-9fe1-4a30-82b2-48e19d2d066a
     fstype: swap
     label: CLR_SWAP
     size: "8150M"
