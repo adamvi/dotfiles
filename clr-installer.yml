@@ -72,6 +72,7 @@ users: [{login: avi, username: Adam VI, password:
     admin: true}]
 kernel: kernel-native
 hostname: clearance
+legacyBios: true
 autoUpdate: true
 copyNetwork: true
 copySwupd: true
