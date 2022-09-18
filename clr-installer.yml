@@ -27,8 +27,8 @@ targetMedia:
 keyboard: us
 language: en_US.UTF-8
 timezone: America/Denver
-bundles: [os-core, os-core-update-dev, openssh-server, NetworkManager, sysadmin-basic,
-  tzdata, bootloader]
+bundles: [os-core, os-core-update-dev, openssh-server, NetworkManager,
+  sysadmin-basic, tzdata]
 telemetry: false
 legacyBios: true
 users:
