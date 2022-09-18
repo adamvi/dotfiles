@@ -7,17 +7,14 @@ targetMedia:
   - name: nvme0n1p1
     path: /dev/nvme0n1p1
     fstype: ext4
+    options: -b 4096 -O ^64bit
     mountpoint: /
     size: "125G"
-    ro: "false"
-    rm: "false"
     type: part
   - name: nvme0n1p2
     path: /dev/nvme0n1p2
     fstype: swap
     size: "8150M"
-    ro: "false"
-    rm: "false"
     type: part
 - name: sda
   path: /dev/sda
@@ -35,8 +32,6 @@ targetMedia:
     fstype: vfat
     mountpoint: /boot
     size: "1073741824"
-    ro: "false"
-    rm: "false"
     type: part
 keyboard: us
 language: en_US.UTF-8
